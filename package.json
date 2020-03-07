@@ -19,6 +19,7 @@
     "holocron": "^1.0.0",
     "holocron-module-route": "^1.0.0",
     "ip": "^1.1.5",
+    "prop-types": "^15.7.2",
     "react": "^16.12.0",
     "react-helmet": "^5.2.1"
   },
