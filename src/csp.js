@@ -14,10 +14,12 @@ export default contentSecurityPolicyBuilder({
       `${ip.address()}:${process.env.HTTP_ONE_APP_DEV_CDN_PORT || 3001}`,
       `localhost:${process.env.HTTP_ONE_APP_DEV_CDN_PORT || 3001}`,
       'https://cdn.jsdelivr.net/',
+      'https://cdnjs.cloudflare.com',
     ],
     fontSrc: [
       "'self'",
       'data:',
+      'https://fonts.gstatic.com/',
     ],
     imgSrc: [
       "'self'",
@@ -27,6 +29,8 @@ export default contentSecurityPolicyBuilder({
       "'self'",
       "'unsafe-inline'",
       'https://cdn.jsdelivr.net/',
+      'https://cdnjs.cloudflare.com',
+      'https://fonts.googleapis.com',
     ],
     connectSrc: [
       "'self'",
