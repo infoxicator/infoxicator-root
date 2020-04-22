@@ -31,6 +31,7 @@ export default contentSecurityPolicyBuilder({
       'https://cdn.jsdelivr.net/',
       'https://cdnjs.cloudflare.com',
       'https://fonts.googleapis.com',
+      'https://maxcdn.bootstrapcdn.com',
     ],
     connectSrc: [
       "'self'",
