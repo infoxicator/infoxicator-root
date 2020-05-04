@@ -4,7 +4,7 @@ import Helmet from 'react-helmet';
 import PropTypes from 'prop-types';
 import Container from 'react-bootstrap/Container';
 import Header from './Header';
-import '../root.scss';
+import Footer from './Footer';
 
 const InfoxicatorRoot = ({ children }) => (
   <Fragment>
@@ -14,6 +14,7 @@ const InfoxicatorRoot = ({ children }) => (
       link={[
         { rel: 'stylesheet', href: 'https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css' },
         { rel: 'stylesheet', href: 'https://cdnjs.cloudflare.com/ajax/libs/prism/1.19.0/themes/prism-tomorrow.min.css' },
+        { rel: 'stylesheet', href: 'https://cdnjs.cloudflare.com/ajax/libs/prism/1.19.0/plugins/line-numbers/prism-line-numbers.min.css' },
         {
           rel: 'icon', type: 'image/jpg', href: 'http://www.infoxication.net/wp-content/uploads/2020/03/favicon.jpg', sizes: '16x16',
         },
@@ -21,8 +22,7 @@ const InfoxicatorRoot = ({ children }) => (
     />
     <Header />
     <Container fluid="md" className="mt-5">{children}</Container>
-
-
+    <Footer />
   </Fragment>
 );
 

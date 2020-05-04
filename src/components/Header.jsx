@@ -5,12 +5,12 @@ const Header = () => (
   <React.Fragment>
     <style type="text/css">
       {`
-    .bg-light {
+    .bg-primary {
       background-color: #004953!important;
   }`}
     </style>
 
-    <Navbar bg="light" variant="dark">
+    <Navbar bg="primary" variant="dark">
       <Navbar.Brand href="/">
         <img
           src="http://www.infoxication.net/wp-content/uploads/2020/03/infoxicator.com_.png"
