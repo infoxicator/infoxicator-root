@@ -2,9 +2,9 @@ import React, { Fragment } from 'react';
 import ModuleRoute from 'holocron-module-route';
 import Helmet from 'react-helmet';
 import PropTypes from 'prop-types';
-import Container from 'react-bootstrap/Container';
 import Header from './Header';
 import Footer from './Footer';
+import ErrorBoundary from './ErrorBoundary';
 
 const InfoxicatorRoot = ({ children }) => (
   <Fragment>
@@ -20,9 +20,11 @@ const InfoxicatorRoot = ({ children }) => (
         },
       ]}
     />
-    <Header />
-    <Container fluid="md" className="mt-5">{children}</Container>
-    <Footer />
+    <ErrorBoundary>
+      <Header />
+      {children}
+      <Footer />
+    </ErrorBoundary>
   </Fragment>
 );
 
