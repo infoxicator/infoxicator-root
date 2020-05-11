@@ -20,29 +20,29 @@
     }
   },
   "dependencies": {
-    "@americanexpress/one-app-bundler": "^6.0.0",
     "@americanexpress/one-app-router": "^1.0.0",
     "bootstrap": "^4.4.1",
     "content-security-policy-builder": "^2.1.0",
+    "fs-extra": "^9.0.0",
     "holocron": "^1.0.0",
     "holocron-module-route": "^1.0.0",
     "ip": "^1.1.5",
+    "node-fetch": "^2.6.0",
     "prop-types": "^15.7.2",
     "react": "^16.12.0",
     "react-bootstrap": "^1.0.0",
     "react-helmet": "^5.2.1"
   },
   "devDependencies": {
+    "@americanexpress/one-app-bundler": "^6.5.0",
     "babel-eslint": "^8.2.6",
     "babel-preset-amex": "^3.2.0",
-    "bulma": "^0.8.2",
     "enzyme": "^3.11.0",
     "enzyme-adapter-react-16": "^1.15.2",
     "enzyme-to-json": "^3.4.4",
     "eslint": "^6.8.0",
     "eslint-config-amex": "^11.1.0",
     "jest": "^25.1.0",
-    "mini-css-extract-plugin": "^0.9.0",
     "rimraf": "^3.0.0"
   },
   "jest": {
