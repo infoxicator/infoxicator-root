@@ -15,7 +15,7 @@ export default contentSecurityPolicyBuilder({
       `localhost:${process.env.HTTP_ONE_APP_DEV_CDN_PORT || 3001}`,
       'cdn.jsdelivr.net',
       'cdnjs.cloudflare.com',
-      'now.sh',
+      '*.now.sh',
     ],
     fontSrc: [
       "'self'",
@@ -24,7 +24,7 @@ export default contentSecurityPolicyBuilder({
     ],
     imgSrc: [
       "'self'",
-      'www.infoxication.net',
+      '*.infoxication.net',
     ],
     styleSrc: [
       "'self'",
