@@ -13,6 +13,7 @@ export default contentSecurityPolicyBuilder({
       'cdn.jsdelivr.net',
       'cdnjs.cloudflare.com',
       '*.now.sh',
+      'one-app-modules.s3.eu-west-2.amazonaws.com',
     ],
     fontSrc: [
       "'self'",
@@ -34,6 +35,7 @@ export default contentSecurityPolicyBuilder({
     connectSrc: [
       "'self'",
       'www.infoxication.net',
+      'one-app-modules.s3.eu-west-2.amazonaws.com',
     ],
   },
 });
