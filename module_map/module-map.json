@@ -1,0 +1,18 @@
+{
+  "modules": {
+    "infoxicator-root": {
+      "browser": {
+        "url": "https://one-app-modules.s3.eu-west-2.amazonaws.com/infoxicator/infoxicator-root/1.0.0/infoxicator-root.browser.js",
+        "integrity": "sha256-oQvlXRxdLHCG2hmwlw7bUUWtSc/YnHX/V/zjIDtE/8g= sha384-t8JPde/VvP1kulQLPG6zK4O20EnXmsSB2OHXrGAtH9KsqKZi3q/klaJfmq4cW0Dg"
+      },
+      "legacyBrowser": {
+        "url": "https://one-app-modules.s3.eu-west-2.amazonaws.com/infoxicator/infoxicator-root/1.0.0/infoxicator-root.legacy.browser.js",
+        "integrity": "sha256-o3LVLHaUwIFkKPSKvsMaBAa6Ts+cQc3PVl60QZJsyi8= sha384-+5Woy4h1gj989i53K0I/KSBPtC7LWRzkHKNNH4P2MI+8Jk0Q95ojfEuKA1sqIF56"
+      },
+      "node": {
+        "url": "https://one-app-modules.s3.eu-west-2.amazonaws.com/infoxicator/infoxicator-root/1.0.0/infoxicator-root.node.js",
+        "integrity": "sha256-WUIWJIuTjQPOAHgdE4ZI5k4SflYf1a64yoOQSmg8IzA= sha384-2eFpWJP8Am4mmEyGGKf/mQPViIvytl+67agq9ZkHw0aDJ5Sc9gHqc/bhtfantb7N"
+      }
+    }
+  }
+}

@@ -21,5 +21,6 @@ deploy:
     bucket: one-app-modules
     skip_cleanup: true
     acl: public_read
-    local_dir: module_map/
+    upload-dir: infoxicator
+    local_dir: module_map
     region: eu-west-2
