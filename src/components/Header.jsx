@@ -13,7 +13,7 @@ const Header = () => (
     <Navbar bg="primary" variant="dark">
       <Navbar.Brand href="/">
         <img
-          src="http://www.infoxication.net/wp-content/uploads/2020/03/infoxicator.com_.png"
+          src="https://www.infoxication.net/wp-content/uploads/2020/03/infoxicator.com_.png"
           width="210"
           height="24"
           className="d-inline-block align-top"

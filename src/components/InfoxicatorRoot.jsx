@@ -16,7 +16,7 @@ const InfoxicatorRoot = ({ children }) => (
         { rel: 'stylesheet', href: 'https://cdnjs.cloudflare.com/ajax/libs/prism/1.19.0/themes/prism-tomorrow.min.css' },
         { rel: 'stylesheet', href: 'https://cdnjs.cloudflare.com/ajax/libs/prism/1.19.0/plugins/line-numbers/prism-line-numbers.min.css' },
         {
-          rel: 'icon', type: 'image/jpg', href: 'http://www.infoxication.net/wp-content/uploads/2020/03/favicon.jpg', sizes: '16x16',
+          rel: 'icon', type: 'image/jpg', href: 'https://www.infoxication.net/wp-content/uploads/2020/03/favicon.jpg', sizes: '16x16',
         },
       ]}
     />
