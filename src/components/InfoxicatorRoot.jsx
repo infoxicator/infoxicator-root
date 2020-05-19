@@ -2,6 +2,7 @@ import React, { Fragment } from 'react';
 import ModuleRoute from 'holocron-module-route';
 import Helmet from 'react-helmet';
 import PropTypes from 'prop-types';
+import SEO from '@americanexpress/react-seo';
 import Header from './Header';
 import Footer from './Footer';
 import ErrorBoundary from './ErrorBoundary';
@@ -19,6 +20,13 @@ const InfoxicatorRoot = ({ children }) => (
           rel: 'icon', type: 'image/jpg', href: 'https://www.infoxication.net/wp-content/uploads/2020/03/favicon.jpg', sizes: '16x16',
         },
       ]}
+    />
+    <SEO
+      author="Ruben Casas"
+      description="Learn microfrontends patterns in React 💠💠💠"
+      keywords={['react', 'tutorial', 'microfrontend', 'holocron']}
+      lang="en-GB"
+      meta={[{ charset: 'utf-8' }]}
     />
     <ErrorBoundary>
       <Header />

@@ -13,7 +13,7 @@ const Footer = () => (
     </Navbar>
     <Navbar bg="light" variant="light">
       <Nav className="m-auto">
-        <p className="legal">Thoughts === mine !== my employers... All views expressed on this site are my own and do not represent the opinions of any entity with which I have been, am now or will be affiliated with.</p>
+        <p className="text-center" style={{ fontSize: '0.5rem' }}>Thoughts === mine !== my employers... All views expressed on this site are my own and do not represent the opinions of any entity with which I have been, am now or will be affiliated with.</p>
       </Nav>
     </Navbar>
   </React.Fragment>
