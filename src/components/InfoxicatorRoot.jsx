@@ -1,11 +1,13 @@
 import React, { Fragment } from 'react';
-import ModuleRoute from 'holocron-module-route';
 import Helmet from 'react-helmet';
 import PropTypes from 'prop-types';
 import SEO from '@americanexpress/react-seo';
+import { configureIguazuSSR } from 'iguazu-holocron';
 import Header from './Header';
 import Footer from './Footer';
 import ErrorBoundary from './ErrorBoundary';
+import childRoutes from '../childRoutes';
+import { reducer } from '../ducks';
 
 const InfoxicatorRoot = ({ children }) => (
   <Fragment>
@@ -24,7 +26,7 @@ const InfoxicatorRoot = ({ children }) => (
     <SEO
       author="Ruben Casas"
       description="Learn microfrontends patterns in React 💠💠💠"
-      keywords={['react', 'tutorial', 'microfrontend', 'holocron']}
+      keywords={['react', 'tutorial', 'micro-ui', 'micro frontends', 'holocron']}
       lang="en-GB"
       meta={[{ charset: 'utf-8' }]}
     />
@@ -40,14 +42,19 @@ InfoxicatorRoot.propTypes = {
   children: PropTypes.node.isRequired,
 };
 
-InfoxicatorRoot.childRoutes = () => [
-  <ModuleRoute path="/" moduleName="infoxicator-main" />,
-  <ModuleRoute path="/:postSlug" moduleName="infoxicator-content" />,
-];
+InfoxicatorRoot.childRoutes = childRoutes;
 
 if (!global.BROWSER) {
   // eslint-disable-next-line global-require
   InfoxicatorRoot.appConfig = require('../appConfig').default;
 }
+
+InfoxicatorRoot.holocron = {
+  name: 'infoxicator-root',
+  reducer,
+  loadModuleData: async ({ store, module, ownProps }) => {
+    await configureIguazuSSR({ store, module, ownProps });
+  },
+};
 
 export default InfoxicatorRoot;
