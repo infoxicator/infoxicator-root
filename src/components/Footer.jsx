@@ -6,7 +6,7 @@ const Footer = () => (
   <React.Fragment>
     <Navbar bg="light" variant="light">
       <Nav className="m-auto">
-        <Nav.Link href="https://github.com/americanexpress/one-app" target="_blank">
+        <Nav.Link href="https://github.com/americanexpress/one-app" target="_blank" rel="noreferrer">
           Made with <span role="img" aria-label="heart">❤️</span>using One App
         </Nav.Link>
       </Nav>
