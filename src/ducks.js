@@ -1,8 +1,8 @@
 import { combineReducers } from 'redux-immutable';
-import { proceduresReducer } from 'iguazu-rpc';
+import { resourcesReducer } from 'iguazu-rest';
 
 export const reducer = combineReducers({
-  procedures: proceduresReducer,
+  resources: resourcesReducer,
 });
 
 export default reducer;

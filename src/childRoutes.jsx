@@ -3,7 +3,7 @@ import ModuleRoute from 'holocron-module-route';
 
 const childRoutes = () => [
   <ModuleRoute path="/" moduleName="infoxicator-main" />,
-  <ModuleRoute path="/posts" moduleName="infoxicator-posts" />,
+  <ModuleRoute path="/:postSlug" moduleName="infoxicator-content" />,
 ];
 
 export default childRoutes;
