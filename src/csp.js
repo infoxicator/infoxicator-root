@@ -8,12 +8,17 @@ export default contentSecurityPolicyBuilder({
     defaultSrc: [
       "'self'",
     ],
+    frameSrc: [
+      "'self'",
+      '*.youtube.com',
+    ],
     scriptSrc: [
       "'self'",
       'cdn.jsdelivr.net',
       'cdnjs.cloudflare.com',
       '*.now.sh',
       'one-app-modules.s3.eu-west-2.amazonaws.com',
+      '*.youtube.com',
     ],
     fontSrc: [
       "'self'",
@@ -36,6 +41,7 @@ export default contentSecurityPolicyBuilder({
       "'self'",
       'www.infoxication.net',
       'one-app-modules.s3.eu-west-2.amazonaws.com',
+      '*.youtube.com',
     ],
   },
 });
