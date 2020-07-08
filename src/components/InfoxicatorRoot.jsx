@@ -54,7 +54,6 @@ if (!global.BROWSER) {
 
 export const mapStateToProps = (state) => {
   const localeName = state.getIn(['intl', 'activeLocale']);
-  // const localeName = activeLocale.split('-')[0];
   const languagePack = state.getIn(
     ['intl', 'languagePacks', localeName, 'infoxicator-root'],
     fromJS({})
@@ -70,7 +69,7 @@ export const loadModuleData = async ({ store, module, ownProps }) => {
   const { dispatch, getState } = store;
   const localeName = getState().getIn(['intl', 'activeLocale']);
   const fallbackLocale = localeName.startsWith('es') ? 'es-ES' : 'en-GB';
-  await dispatch(loadLanguagePack('infoxicator-root', { fallbackLocale: 'en-GB' }));
+  await dispatch(loadLanguagePack('infoxicator-root', { fallbackLocale }));
   await configureIguazuSSR({ store, module, ownProps });
 };
 
