@@ -3,13 +3,16 @@ import Helmet from 'react-helmet';
 import PropTypes from 'prop-types';
 import SEO from '@americanexpress/react-seo';
 import { configureIguazuSSR } from 'iguazu-holocron';
+import { connect } from 'react-redux';
+import { loadLanguagePack } from '@americanexpress/one-app-ducks';
+import { fromJS } from 'immutable';
 import Header from './Header';
 import Footer from './Footer';
 import ErrorBoundary from './ErrorBoundary';
 import childRoutes from '../childRoutes';
 import { reducer } from '../ducks';
 
-const InfoxicatorRoot = ({ children }) => (
+const InfoxicatorRoot = ({ children, languageData, localeName }) => (
   <Fragment>
     <Helmet
       title="Infoxicator | One App | Microfrontend | tutorial | React"
@@ -31,9 +34,9 @@ const InfoxicatorRoot = ({ children }) => (
       meta={[{ charset: 'utf-8' }]}
     />
     <ErrorBoundary>
-      <Header />
+      <Header localeName={localeName} />
       {children}
-      <Footer />
+      <Footer languageData={languageData} />
     </ErrorBoundary>
   </Fragment>
 );
@@ -49,12 +52,32 @@ if (!global.BROWSER) {
   InfoxicatorRoot.appConfig = require('../appConfig').default;
 }
 
+export const mapStateToProps = (state) => {
+  const localeName = state.getIn(['intl', 'activeLocale']);
+  // const localeName = activeLocale.split('-')[0];
+  const languagePack = state.getIn(
+    ['intl', 'languagePacks', localeName, 'infoxicator-root'],
+    fromJS({})
+  ).toJS();
+
+  return {
+    languageData: languagePack && languagePack.data ? languagePack.data : {},
+    localeName,
+  };
+};
+
+export const loadModuleData = async ({ store, module, ownProps }) => {
+  const { dispatch, getState } = store;
+  const localeName = getState().getIn(['intl', 'activeLocale']);
+  const fallbackLocale = localeName.startsWith('es') ? 'es-ES' : 'en-GB';
+  await dispatch(loadLanguagePack('infoxicator-root', { fallbackLocale }));
+  await configureIguazuSSR({ store, module, ownProps });
+};
+
 InfoxicatorRoot.holocron = {
   name: 'infoxicator-root',
   reducer,
-  loadModuleData: async ({ store, module, ownProps }) => {
-    await configureIguazuSSR({ store, module, ownProps });
-  },
+  loadModuleData,
 };
 
-export default InfoxicatorRoot;
+export default connect(mapStateToProps, null)(InfoxicatorRoot);
