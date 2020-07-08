@@ -70,7 +70,7 @@ export const loadModuleData = async ({ store, module, ownProps }) => {
   const { dispatch, getState } = store;
   const localeName = getState().getIn(['intl', 'activeLocale']);
   const fallbackLocale = localeName.startsWith('es') ? 'es-ES' : 'en-GB';
-  await dispatch(loadLanguagePack('infoxicator-root', { fallbackLocale }));
+  await dispatch(loadLanguagePack('infoxicator-root', { fallbackLocale: 'en-GB' }));
   await configureIguazuSSR({ store, module, ownProps });
 };
 
